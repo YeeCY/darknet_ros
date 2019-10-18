@@ -479,7 +479,7 @@ void YoloObjectDetector::yolo()
 {
   const auto wait_duration = std::chrono::milliseconds(2000);
   while (!getImageStatus()) {
-    printf("Waiting for image.\n");
+    ROS_INFO("[YoloObjectDetector] Waiting for image...");
     if (!isNodeRunning()) {
       return;
     }
